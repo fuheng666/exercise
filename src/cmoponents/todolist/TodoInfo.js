@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import store from '../store'
-
+import store from '../../store'
 export default class TodoInfo extends Component {
   state = {
-    list: store.getState().list,
+    list: store.getState().todolist.list,
   };
 
   compute = () => {
@@ -22,10 +21,9 @@ export default class TodoInfo extends Component {
   };
 
   componentDidMount() {
-    console.log(store);
     store.subscribe(() => {
       this.setState({
-        list: store.getState().list,
+        list: store.getState().todolist.list,
       });
     });
   }

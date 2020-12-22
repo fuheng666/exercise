@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import store from "../store/";
-import actionCreatos from '../store/actionCreators'
+import store from "../../store";
+import actionCreatos from "../../store/todoList/actionCreators";
 
 const LiItem = props =>{
 
@@ -38,7 +38,7 @@ export default class todoConent extends Component {
   }
   getState() {
     this.setState({
-      list: store.getState().list,
+      list: store.getState().todolist.list,
     });
   }
 

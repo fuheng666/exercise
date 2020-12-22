@@ -1,4 +1,4 @@
-import store from './index'
+import store from '../index'
 import { ADD_NEW_TODO, ChangeNewTodo } from "./actonType";
 
  const  addNewTodo = (title) =>{
